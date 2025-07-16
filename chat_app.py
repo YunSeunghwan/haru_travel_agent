@@ -163,7 +163,7 @@ class DatabaseManager:
 class TravelRecommender:
     def __init__(self):
         self.geolocator = Nominatim(user_agent="travel_chat_bot")
-        self.api_key = os.getenv('GOOGLE_PLACES_API_KEY', 'AIzaSyBUM2enIXi8HZgaahsCuEYfFflCfn5gdUQ')
+        self.api_key = os.getenv('GOOGLE_PLACES_API_KEY')
     
     def search_nearby_places(self, lat, lng, radius=5000, place_type='restaurant'):
         """주변 장소 검색"""

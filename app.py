@@ -15,7 +15,7 @@ class TravelRecommender:
     def __init__(self):
         self.geolocator = Nominatim(user_agent="travel_recommender")
         
-        self.api_key = os.getenv('GOOGLE_PLACES_API_KEY', 'AIzaSyBUM2enIXi8HZgaahsCuEYfFflCfn5gdUQ')
+        self.api_key = os.getenv('GOOGLE_PLACES_API_KEY')
         
     def get_current_location(self, lat, lng):
         """현재 위치 정보를 가져옵니다."""
